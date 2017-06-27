@@ -1,0 +1,8 @@
+<div class="row">
+  <div class="col-md-5">
+    <app-recepti-lista (receptSelected)="selectedRecept = $event"></app-recepti-lista>
+  </div>
+  <div class="col-md-7">
+    <app-recepti-detalji [selectedRecept]="selectedRecept"></app-recepti-detalji>
+  </div>
+</div>

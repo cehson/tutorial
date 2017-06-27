@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="col-xs-12">
+    <a class="btn btn-success">New Recipe</a>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <ul class="list-group">
+      <app-recepti-item *ngFor="let recept of recepti"   [recept]="recept" (click)="onSelected(recept)"></app-recepti-item>
+    </ul>
+  </div>
+</div>
