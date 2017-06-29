@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Recept } from '../recept';
+import {ShoppingListService} from "../../shopping-list/shopping-list.service";
 
 @Component({
   selector: 'app-recepti-detalji',
@@ -11,9 +12,11 @@ export class ReceptiDetaljiComponent implements OnInit {
  @Input() selectedRecept: Recept;
 
 
-  constructor() { }
+  constructor(private shopingListServis: ShoppingListService) { }
 
   ngOnInit() {
   }
-
+    addToShoppingList(){
+       this.shopingListServis.addItems(this.selectedRecept.ingridient);
+    }
 }

@@ -11,6 +11,8 @@ import { ReceptiDetaljiComponent } from './recepti/recepti-detalji/recepti-detal
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingListAddComponent } from './shopping-list/shopping-list-add.component';
 import { DropdownDirective } from './dropdown.directive';
+import {ReceptService} from "./recepti/recept.service";
+import {ShoppingListService} from "./shopping-list/shopping-list.service";
 
 @NgModule({
   declarations: [
@@ -29,7 +31,7 @@ import { DropdownDirective } from './dropdown.directive';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [ReceptService, ShoppingListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
