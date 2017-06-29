@@ -1,20 +1,25 @@
 import {Directive, HostBinding, HostListener} from '@angular/core';
 
 @Directive({
-  selector: '[appDropdown]'
+    selector: '[appDropdown]'
 })
 export class DropdownDirective {
 
-  @HostBinding('class.open') get opened(){ // CSS klasa "open" ce biti postavljena na Hosting element ako isOpen property vrati "true", sto po defaultu ne vrača.
-    return this.isOpen;
-  }
-  @HostListener('click') open(){
-    this.isOpen = true;
-  }
-  @HostListener('mouseleave') close(){
-    this.isOpen = false;
-  }
-  private isOpen = false;
-  constructor() { }
+    @HostBinding('class.open') get opened() { // CSS klasa "open" ce biti postavljena na Hosting element ako isOpen property vrati "true", sto po defaultu ne vrača.
+        return this.isOpen;
+    }
+
+    @HostListener('click') open() {
+        this.isOpen = true;
+    }
+
+    @HostListener('mouseleave') close() {
+        this.isOpen = false;
+    }
+
+    private isOpen = false;
+
+    constructor() {
+    }
 
 }
