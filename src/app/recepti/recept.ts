@@ -1,5 +1,5 @@
 import { Ingridients } from "../ingridients"
 
 export class Recept {
-    constructor(public ime, public opis, public imagePath, public ingridient: Ingridients[]){}
+    constructor(public ime: string, public opis: string, public imagePath: string, public ingridient: Ingridients[]){}
 }
