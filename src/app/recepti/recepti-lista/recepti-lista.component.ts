@@ -10,7 +10,6 @@ export class ReceptiListaComponent implements OnInit {
 
 
 
-
     onSelected(recept: Recept){
         this.receptSelected.emit(recept);
     }

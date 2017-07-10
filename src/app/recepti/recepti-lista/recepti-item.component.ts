@@ -9,7 +9,7 @@ import { Recept } from '../recept';
 export class ReceptiItemComponent implements OnInit {
 
 @Input() recept: Recept;
-         receptID;
+         receptID: number = 1;
 
   constructor() { }
 

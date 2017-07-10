@@ -14,6 +14,9 @@ import { DropdownDirective } from './dropdown.directive';
 import {ReceptService} from "./recepti/recept.service";
 import {ShoppingListService} from "./shopping-list/shopping-list.service";
 import {routing} from "./app.routes";
+import { ReceptiStartComponent } from './recepti/recepti-start.component';
+import { ReceptiEditComponent } from './recepti/recepti-edit/recepti-edit.component';
+import {child_routing} from "./recepti/recepti.routes";
 
 @NgModule({
   declarations: [
@@ -25,13 +28,16 @@ import {routing} from "./app.routes";
     ReceptiDetaljiComponent,
     ShoppingListComponent,
     ShoppingListAddComponent,
-    DropdownDirective
+    DropdownDirective,
+    ReceptiStartComponent,
+    ReceptiEditComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    routing
+    routing,
+    child_routing
   ],
   providers: [ReceptService, ShoppingListService],
   bootstrap: [AppComponent]
