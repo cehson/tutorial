@@ -1,4 +1,4 @@
-import {Component, OnInit, Input} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import { Recept } from '../recept';
 
 @Component({
@@ -6,14 +6,12 @@ import { Recept } from '../recept';
   templateUrl: './recepti-item.component.html',
   styleUrls: ['./recepti-item.component.css']
 })
-export class ReceptiItemComponent implements OnInit {
+export class ReceptiItemComponent {
+  @Input() recept: Recept;
+  @Input() receptID: number ;
 
-@Input() recept: Recept;
-         receptID: number = 1;
 
-  constructor() { }
 
-  ngOnInit() {
-  }
+
 
 }

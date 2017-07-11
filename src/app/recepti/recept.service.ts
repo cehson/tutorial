@@ -32,4 +32,12 @@ export class ReceptService {
     return this.recepti;
    }
 
+   getRecepte(id: number){
+       return this.recepti[id];
+   }
+
+   deleteRecept(recept: Recept){
+       this.recepti.splice(this.recepti.indexOf(recept), 1);
+   }
+
 }

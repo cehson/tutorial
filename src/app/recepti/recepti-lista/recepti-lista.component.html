@@ -6,7 +6,8 @@
 <div class="row">
   <div class="col-xs-12">
     <ul class="list-group">
-      <app-recepti-item *ngFor="let recept of recepti"   [recept]="recept" (click)="onSelected(recept)"></app-recepti-item>
+
+      <app-recepti-item *ngFor="let recept of recepti; let i = index" [receptID]="i"  [recept]="recept" (click)="onSelected(recept)"></app-recepti-item>
     </ul>
   </div>
 </div>
