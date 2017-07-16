@@ -11,6 +11,7 @@ import {ShoppingListService} from "./shopping-list.service";
 export class ShoppingListComponent implements OnInit {
 
   items: Ingridients[] = [];
+  selectedItem: Ingridients = null;
 
   constructor(private shopingList: ShoppingListService) {
 
@@ -19,5 +20,12 @@ export class ShoppingListComponent implements OnInit {
   ngOnInit() {
     this.items = this.shopingList.getItems();
   }
+
+  onSelecetItem(item: Ingridients){
+
+
+
+  }
+
 
 }
